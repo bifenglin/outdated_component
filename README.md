@@ -1,6 +1,6 @@
-# Examining the Impact of Outdated Third-Party Components on Software Supply Chains
+# Mitigating the Risks of Outdated Third-Party Components in Software Supply Chains: Insights from the NPM Ecosystem
 
-This repository contains the code and data used in the research paper titled "Examining the Impact of Outdated Third-Party Components on Software Supply Chains: An In-depth Study in the NPM Ecosystem". Our study investigates the prevalence and impact of outdated third-party components in Node.js packages and their cascading effects on software supply chains.
+This repository contains the code and data used in the research paper titled "Mitigating the Risks of Outdated Third-Party Components in Software Supply Chains: Insights from the NPM Ecosystem". Our study investigates the prevalence and impact of outdated third-party components in Node.js packages and their cascading effects on software supply chains.
 
 ## Repository Structure
 
