@@ -54,13 +54,13 @@ To run the Python script, you can use:
 ```bash
 python combine_model_v1.py
 ```
-License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Contact
-For any questions or requests, please open an issue in this repository, or contact the authors at [author's email].
+## Contact
+For any questions or requests, please open an issue in this repository, or contact the authors at fenglin@stu.ecnu.edu.cn.
 
-Citation
+## Citation
 If you use the code or data from this repository in your research, please cite our paper:
 
 [Fenglin Bi]. (2023). Examining the Impact of Outdated Third-Party Components on Software Supply Chains: An In-depth Study in the NPM Ecosystem. In: Conference/ Journal. DOI: [DOI]
