@@ -10,6 +10,7 @@ This repository contains the code and data used in the research paper titled "Mi
 - `chart.ipynb`: Jupyter notebook for generating the charts and figures presented in the paper.
 - `combine_model_v1.py`: Python script that implements the combination of multiple models used in the study.
 - `data_process.ipynb`: Jupyter notebook used for preprocessing the raw data from the NPM registry.
+- `sc_generation.ipynb`: Jupyter notebook used for generating the supply chain.
 - `LICENSE`: The license file for the software and data included in this repository.
 - `README.md`: This file, which provides an overview and instructions for the repository.
 - `.gitignore`: Specifies intentionally untracked files that Git should ignore.
