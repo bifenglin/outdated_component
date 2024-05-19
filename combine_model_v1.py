@@ -1,7 +1,5 @@
 import os
 import pandas as pd
-from imblearn.over_sampling import SMOTE
-from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split, GridSearchCV, KFold
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.preprocessing import MinMaxScaler
@@ -140,13 +138,13 @@ def main():
 
 
     models = [
-        ('Logistic Regression', LogisticRegression(max_iter=10000), {}),  # Increased max_iter for convergence
-        ('Decision Tree Classifier', DecisionTreeClassifier(), {'model__max_depth': range(1, 10)}),
-        ('Support Vector Machine', SVC(), {'model__kernel': ['linear', 'poly', 'rbf', 'sigmoid'], 'model__C': [1, 10]}),
-        ('K-Nearest Neighbors', KNeighborsClassifier(), {'model__n_neighbors': range(1, 10)}),
-        ('Random Forest Classifier', RandomForestClassifier(), {'model__n_estimators': [100, 200, 300]}),
-        ('Gradient Boosting Classifier', GradientBoostingClassifier(), {'model__learning_rate': [0.1, 0.01], 'model__n_estimators': [100, 200]}),
-        ('AdaBoost Classifier', AdaBoostClassifier(), {'model__learning_rate': [0.1, 0.01], 'model__n_estimators': [100, 200]})
+        ('Logistic Regression', LogisticRegression(max_iter=10000), {'model__C': [0.1, 1, 10, 100], 'model__penalty': ['l1', 'l2', 'elasticnet']}),
+        ('Decision Tree Classifier', DecisionTreeClassifier(), {'model__max_depth': range(1, 10), 'model__min_samples_split': range(2, 10), 'model__min_samples_leaf': range(1, 5)}),
+        ('Support Vector Machine', SVC(), {'model__kernel': ['linear', 'poly', 'rbf', 'sigmoid'], 'model__C': [0.1, 1, 10, 100], 'model__gamma': ['scale', 'auto']}),
+        ('K-Nearest Neighbors', KNeighborsClassifier(), {'model__n_neighbors': range(1, 10), 'model__weights': ['uniform', 'distance'], 'model__metric': ['euclidean', 'manhattan', 'minkowski']}),
+        ('Random Forest Classifier', RandomForestClassifier(), {'model__n_estimators': [100, 200, 300], 'model__max_features': ['auto', 'sqrt', 'log2'], 'model__min_samples_split': [2, 5, 10]}),
+        ('Gradient Boosting Classifier', GradientBoostingClassifier(), {'model__learning_rate': [0.1, 0.01], 'model__n_estimators': [100, 200], 'model__max_depth': [3, 5, 7]}),
+        ('AdaBoost Classifier', AdaBoostClassifier(), {'model__learning_rate': [0.1, 0.01], 'model__n_estimators': [100, 200], 'model__algorithm': ['SAMME', 'SAMME.R']}),
     ]
 
     results = []
